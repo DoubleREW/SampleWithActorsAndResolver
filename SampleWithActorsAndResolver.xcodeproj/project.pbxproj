@@ -11,6 +11,10 @@
 		714D74A0273EF09D00A07860 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D749F273EF09D00A07860 /* ContentView.swift */; };
 		714D74A2273EF09F00A07860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714D74A1273EF09F00A07860 /* Assets.xcassets */; };
 		714D74A5273EF09F00A07860 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714D74A4273EF09F00A07860 /* Preview Assets.xcassets */; };
+		714D74AE273EF0E400A07860 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 714D74AD273EF0E400A07860 /* Resolver */; };
+		714D74B0273EF10E00A07860 /* App+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D74AF273EF10E00A07860 /* App+Injection.swift */; };
+		714D74B3273EF1BB00A07860 /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D74B2273EF1BB00A07860 /* FirstViewModel.swift */; };
+		714D74B5273EF1CB00A07860 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D74B4273EF1CB00A07860 /* SecondViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,9 @@
 		714D74A1273EF09F00A07860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		714D74A4273EF09F00A07860 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		714D74A6273EF09F00A07860 /* SampleWithActorsAndResolver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleWithActorsAndResolver.entitlements; sourceTree = "<group>"; };
+		714D74AF273EF10E00A07860 /* App+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Injection.swift"; sourceTree = "<group>"; };
+		714D74B2273EF1BB00A07860 /* FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
+		714D74B4273EF1CB00A07860 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714D74AE273EF0E400A07860 /* Resolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				714D749D273EF09D00A07860 /* SampleWithActorsAndResolverApp.swift */,
+				714D74B2273EF1BB00A07860 /* FirstViewModel.swift */,
+				714D74B4273EF1CB00A07860 /* SecondViewModel.swift */,
 				714D749F273EF09D00A07860 /* ContentView.swift */,
+				714D74AF273EF10E00A07860 /* App+Injection.swift */,
 				714D74A1273EF09F00A07860 /* Assets.xcassets */,
 				714D74A6273EF09F00A07860 /* SampleWithActorsAndResolver.entitlements */,
 				714D74A3273EF09F00A07860 /* Preview Content */,
@@ -85,6 +96,9 @@
 			dependencies = (
 			);
 			name = SampleWithActorsAndResolver;
+			packageProductDependencies = (
+				714D74AD273EF0E400A07860 /* Resolver */,
+			);
 			productName = SampleWithActorsAndResolver;
 			productReference = 714D749A273EF09D00A07860 /* SampleWithActorsAndResolver.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +127,9 @@
 				Base,
 			);
 			mainGroup = 714D7491273EF09D00A07860;
+			packageReferences = (
+				714D74AC273EF0E400A07860 /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
 			productRefGroup = 714D749B273EF09D00A07860 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,7 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				714D74A0273EF09D00A07860 /* ContentView.swift in Sources */,
+				714D74B0273EF10E00A07860 /* App+Injection.swift in Sources */,
 				714D749E273EF09D00A07860 /* SampleWithActorsAndResolverApp.swift in Sources */,
+				714D74B5273EF1CB00A07860 /* SecondViewModel.swift in Sources */,
+				714D74B3273EF1BB00A07860 /* FirstViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		714D74AC273EF0E400A07860 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		714D74AD273EF0E400A07860 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 714D74AC273EF0E400A07860 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 714D7492273EF09D00A07860 /* Project object */;
 }
